@@ -1,0 +1,256 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HopeForAll - Non-Profit Organization</title>
+
+    <!-- ========== CSS (IN SAME FILE) ========== -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        header{
+            background: #2b6777;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        nav{
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero{
+            background: url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1500&q=80')
+            center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1{
+            font-size: 3rem;
+        }
+
+        .btn{
+            background: #2b6777;
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .section{
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        /* Mission */
+        .mission-box{
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Events */
+        .events-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .event-item{
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .date{
+            color: #2b6777;
+            font-weight: bold;
+        }
+
+        /* Donation */
+        .donation-box{
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Volunteer Form */
+        form{
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        form input, form textarea{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        footer{
+            background: #1b3a4b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER / NAVIGATION ========== -->
+    <header>
+        <nav>
+            <h2>HopeForAll</h2>
+            <ul>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+        <div>
+            <h1>Together, We Make a Difference</h1>
+            <a href="#donate" class="btn">Support Us</a>
+        </div>
+    </section>
+
+    <!-- ========== MISSION ========== -->
+    <section id="mission" class="section">
+        <h2>Our Mission</h2>
+        <div class="mission-box">
+            <p>
+                HopeForAll is dedicated to helping underprivileged communities through education,
+                food programs, medical support, and community outreach.  
+                Our mission is to bring hope, opportunities, and resources to those in need.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== EVENTS ========== -->
+    <section id="events" class="section">
+        <h2>Upcoming Events</h2>
+
+        <div class="events-grid">
+
+            <div class="event-item">
+                <h3>Food Drive</h3>
+                <p class="date">March 15, 2025</p>
+                <p>Join us as we distribute food to families in low-income neighborhoods.</p>
+            </div>
+
+            <div class="event-item">
+                <h3>Health Camp</h3>
+                <p class="date">April 2, 2025</p>
+                <p>Free medical checkups and health awareness programs.</p>
+            </div>
+
+            <div class="event-item">
+                <h3>Community Cleanup</h3>
+                <p class="date">May 10, 2025</p>
+                <p>Help us clean and beautify parks and public areas.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========== DONATION OPTIONS ========== -->
+    <section id="donate" class="section">
+        <h2>Donate</h2>
+        <div class="donation-box">
+            <p>Your contributions help us change lives. Choose a donation amount:</p>
+
+            <a href="#" class="btn">$10</a>
+            <a href="#" class="btn">$25</a>
+            <a href="#" class="btn">$50</a>
+            <a href="#" class="btn">$100</a>
+
+            <p style="margin-top:20px;">Or enter your own amount:</p>
+            <input type="number" placeholder="Enter Amount ($)" style="padding:10px; width:200px; border:1px solid #ccc; border-radius:5px;">
+            <br><br>
+            <a href="#" class="btn">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- ========== VOLUNTEER OPPORTUNITIES ========== -->
+    <section id="volunteer" class="section">
+        <h2>Volunteer With Us</h2>
+
+        <form id="volunteerForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Phone Number" required>
+            <textarea rows="4" placeholder="Tell us why you want to volunteer..." required></textarea>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+
+        <p id="volunteerMessage" style="text-align:center; margin-top:20px; font-weight:bold; color:green;"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 HopeForAll — Non-Profit Organization</p>
+    </footer>
+
+    <!-- ========== JAVASCRIPT (FORM CONFIRMATIONS) ========== -->
+    <script>
+        document.getElementById("volunteerForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            document.getElementById("volunteerMessage").innerText = 
+                "🎉 Thank you for volunteering! We'll contact you soon.";
+        });
+    </script>
+
+</body>
+</html>
+
